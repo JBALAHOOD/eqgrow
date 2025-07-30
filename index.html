@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EQGrow - Emotional Intelligence Training</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <div class="logo-container">
+                    <div class="logo-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <div class="logo-text">
+                        <h2>EQGrow</h2>
+                        <p>Emotional Intelligence Training</p>
+                    </div>
+                </div>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <div class="nav-group">
+                    <h3 class="nav-group-label">Your Journey</h3>
+                    <ul class="nav-menu">
+                        <li><a href="#home" class="nav-link active" data-page="home">
+                            <i class="fas fa-home"></i>
+                            <span>Home</span>
+                        </a></li>
+                        <li><a href="#assessment" class="nav-link" data-page="assessment">
+                            <i class="fas fa-award"></i>
+                            <span>EQ Assessment</span>
+                        </a></li>
+                        <li><a href="#journal" class="nav-link" data-page="journal">
+                            <i class="fas fa-pen"></i>
+                            <span>Reflection Journal</span>
+                        </a></li>
+                        <li><a href="#learn" class="nav-link" data-page="learn">
+                            <i class="fas fa-book-open"></i>
+                            <span>Learn About EQ</span>
+                        </a></li>
+                        <li><a href="#progress" class="nav-link" data-page="progress">
+                            <i class="fas fa-chart-line"></i>
+                            <span>My Progress</span>
+                        </a></li>
+                        <li><a href="#profile" class="nav-link" data-page="profile">
+                            <i class="fas fa-user-circle"></i>
+                            <span>Profile & Goals</span>
+                        </a></li>
+                    </ul>
+                </div>
+                
+                <div class="motivation-card">
+                    <div class="motivation-header">
+                        <i class="fas fa-heart"></i>
+                        <span>Daily Motivation</span>
+                    </div>
+                    <p>"Emotional intelligence is not about suppressing emotions, but understanding and using them wisely."</p>
+                </div>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <div class="user-info">
+                    <div class="user-avatar">U</div>
+                    <div class="user-details">
+                        <p class="user-name">Your EQ Journey</p>
+                        <p class="user-status">Building emotional awareness</p>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="mobile-header">
+                <button class="sidebar-toggle" id="sidebarToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <h1>EQGrow</h1>
+            </header>
+
+            <div class="page-content">
+                <!-- Home Page -->
+                <div id="home" class="page active">
+                    <div class="hero-section">
+                        <div class="hero-icon">
+                            <i class="fas fa-brain"></i>
+                            <div class="sparkle">
+                                <i class="fas fa-sparkles"></i>
+                            </div>
+                        </div>
+                        <h1 class="hero-title">Welcome to EQGrow</h1>
+                        <p class="hero-subtitle">Transform your emotional intelligence through daily practice, mindful reflection, and proven techniques. Start your journey to better relationships and self-awareness today.</p>
+                        <div class="hero-motto">
+                            <i class="fas fa-heart"></i>
+                            <span>Your emotional growth starts here</span>
+                        </div>
+                    </div>
+
+                    <div class="content-grid">
+                        <div class="main-column">
+                            <!-- Daily Exercise -->
+                            <div class="card daily-exercise-card">
+                                <div class="card-header">
+                                    <h3><i class="fas fa-bullseye"></i> Today's EQ Exercise</h3>
+                                    <div class="completion-status" id="completionStatus" style="display: none;">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>Completed!</span>
+                                    </div>
+                                </div>
+                                <div class="card-content">
+                                    <div class="exercise-meta">
+                                        <span class="badge category-badge" id="exerciseCategory">Self Awareness</span>
+                                        <span class="duration"><i class="fas fa-clock"></i> <span id="exerciseDuration">5 min</span></span>
+                                        <span class="badge difficulty-badge" id="exerciseDifficulty">Beginner</span>
+                                    </div>
+                                    
+                                    <div class="exercise-content">
+                                        <h4 id="exerciseTitle">Mindful Breathing</h4>
+                                        <p id="exerciseDescription">Practice deep breathing to center yourself and become more aware of your emotional state.</p>
+                                    </div>
+                                    
+                                    <div class="exercise-instructions">
+                                        <h5><i class="fas fa-sparkles"></i> Instructions</h5>
+                                        <p id="exerciseInstructions">Find a quiet place, sit comfortably, and focus on your breath. Inhale for 4 counts, hold for 4, exhale for 4. Repeat for 5 minutes.</p>
+                                    </div>
+                                    
+                                    <button class="btn btn-primary" id="completeExerciseBtn">
+                                        Mark as Complete
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Motivational Quote -->
+                            <div class="card motivation-card">
+                                <div class="card-content">
+                                    <div class="quote-content">
+                                        <i class="fas fa-quote-left"></i>
+                                        <p>"The greatest glory in living lies not in never falling, but in rising every time we fall."</p>
+                                        <span class="quote-author">- Nelson Mandela</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Quick Actions -->
+                            <div class="card quick-actions-card">
+                                <div class="card-header">
+                                    <h3><i class="fas fa-lightbulb"></i> Continue Your Journey</h3>
+                                </div>
+                                <div class="card-content">
+                                    <div class="actions-grid">
+                                        <a href="#assessment" class="action-card assessment-action">
+                                            <div class="action-icon">
+                                                <i class="fas fa-brain"></i>
+                                            </div>
+                                            <div class="action-content">
+                                                <h4>Take EQ Assessment</h4>
+                                                <p>Discover your emotional intelligence strengths</p>
+                                                <span class="action-link">Start Assessment <i class="fas fa-arrow-right"></i></span>
+                                            </div>
+                                        </a>
+                                        
+                                        <a href="#journal" class="action-card journal-action">
+                                            <div class="action-icon">
+                                                <i class="fas fa-heart"></i>
+                                            </div>
+                                            <div class="action-content">
+                                                <h4>Write Reflection</h4>
+                                                <p>Journal your thoughts and emotions</p>
+                                                <span class="action-link">Open Journal <i class="fas fa-arrow-right"></i></span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="sidebar-column">
+                            <!-- Quick Stats -->
+                            <div class="card stats-card">
+                                <div class="card-header">
+                                    <h3><i class="fas fa-chart-line"></i> Your Progress</h3>
+                                </div>
+                                <div class="card-content">
+                                    <div class="stat-item">
+                                        <div class="stat-info">
+                                            <i class="fas fa-fire"></i>
+                                            <span>Current Streak</span>
+                                        </div>
+                                        <div class="stat-value">
+                                            <span id="currentStreak">0</span>
+                                            <small>days</small>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="stat-item">
+                                        <div class="stat-info">
+                                            <i class="fas fa-trophy"></i>
+                                            <span>Total Exercises</span>
+                                        </div>
+                                        <div class="stat-value">
+                                            <span id="totalExercises">0</span>
+                                            <small>completed</small>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="stat-item">
+                                        <div class="stat-info">
+                                            <i class="fas fa-calendar"></i>
+                                            <span>This Month</span>
+                                        </div>
+                                        <div class="stat-value">
+                                            <span id="monthlyProgress">0</span>
+                                            <small>days</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Weekly Progress -->
+                            <div class="card progress-card">
+                                <div class="card-header">
+                                    <h3><i class="fas fa-chart-line"></i> This Week's Progress</h3>
+                                </div>
+                                <div class="card-content">
+                                    <div class="progress-item">
+                                        <div class="progress-header">
+                                            <span>Daily Exercises</span>
+                                            <span id="weeklyProgress">0/7</span>
+                                        </div>
+                                        <div class="progress-bar">
+                                            <div class="progress-fill" id="weeklyProgressFill"></div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="progress-actions">
+                                        <a href="#progress" class="btn btn-outline">View Full Progress</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Assessment Page -->
+                <div id="assessment" class="page">
+                    <div class="assessment-container">
+                        <div class="assessment-header">
+                            <div class="assessment-icon">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <h1>EQ Assessment</h1>
+                            <p>Discover your emotional intelligence strengths and areas for growth</p>
+                        </div>
+
+                        <div class="assessment-card">
+                            <div class="assessment-progress">
+                                <div class="progress-header">
+                                    <h3 id="questionCounter">Question 1 of 10</h3>
+                                    <span id="progressPercentage">10% Complete</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" id="assessmentProgressFill"></div>
+                                </div>
+                            </div>
+
+                            <div class="question-container" id="questionContainer">
+                                <!-- Questions will be loaded here -->
+                            </div>
+
+                            <div class="assessment-actions">
+                                <button class="btn btn-outline" id="prevBtn" disabled>Previous</button>
+                                <button class="btn btn-primary" id="nextBtn">Next Question</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Journal Page -->
+                <div id="journal" class="page">
+                    <div class="journal-container">
+                        <div class="journal-header">
+                            <div class="journal-icon">
+                                <i class="fas fa-pen"></i>
+                            </div>
+                            <h1>Reflection Journal</h1>
+                            <p>Explore your thoughts and emotions through guided reflection. Building self-awareness is the foundation of emotional intelligence.</p>
+                        </div>
+
+                        <div class="journal-content">
+                            <div class="journal-main">
+                                <div class="journal-actions">
+                                    <button class="btn btn-primary" id="newEntryBtn">
+                                        <i class="fas fa-plus"></i> New Entry
+                                    </button>
+                                </div>
+
+                                <div class="journal-entries" id="journalEntries">
+                                    <!-- Journal entries will be loaded here -->
+                                </div>
+                            </div>
+
+                            <div class="journal-sidebar">
+                                <div class="emotion-insights">
+                                    <h3>Emotion Insights</h3>
+                                    <div class="insights-content">
+                                        <p>Start journaling to see your emotional patterns and insights.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Learn Page -->
+                <div id="learn" class="page">
+                    <div class="learn-container">
+                        <div class="learn-header">
+                            <div class="learn-icon">
+                                <i class="fas fa-book-open"></i>
+                            </div>
+                            <h1>Learn About EQ</h1>
+                            <p>Explore the five pillars of emotional intelligence and practical techniques to enhance your EQ.</p>
+                        </div>
+
+                        <div class="eq-pillars">
+                            <div class="pillar-card">
+                                <div class="pillar-icon">
+                                    <i class="fas fa-eye"></i>
+                                </div>
+                                <h3>Self-Awareness</h3>
+                                <p>Understanding your emotions, strengths, weaknesses, and their impact on others.</p>
+                            </div>
+
+                            <div class="pillar-card">
+                                <div class="pillar-icon">
+                                    <i class="fas fa-shield-alt"></i>
+                                </div>
+                                <h3>Self-Regulation</h3>
+                                <p>Managing your emotions and impulses, adapting to changing circumstances.</p>
+                            </div>
+
+                            <div class="pillar-card">
+                                <div class="pillar-icon">
+                                    <i class="fas fa-heart"></i>
+                                </div>
+                                <h3>Empathy</h3>
+                                <p>Understanding others' emotions and responding appropriately to their needs.</p>
+                            </div>
+
+                            <div class="pillar-card">
+                                <div class="pillar-icon">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <h3>Social Skills</h3>
+                                <p>Building relationships, communicating effectively, and managing conflicts.</p>
+                            </div>
+
+                            <div class="pillar-card">
+                                <div class="pillar-icon">
+                                    <i class="fas fa-rocket"></i>
+                                </div>
+                                <h3>Motivation</h3>
+                                <p>Setting and achieving goals, maintaining optimism, and driving success.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Progress Page -->
+                <div id="progress" class="page">
+                    <div class="progress-container">
+                        <div class="progress-header">
+                            <div class="progress-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <h1>My Progress</h1>
+                            <p>Track your emotional intelligence journey and celebrate your growth.</p>
+                        </div>
+
+                        <div class="progress-content">
+                            <div class="progress-overview">
+                                <div class="overview-card">
+                                    <h3>Overall Progress</h3>
+                                    <div class="progress-circle">
+                                        <span id="overallProgress">0%</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="progress-charts">
+                                <div class="chart-card">
+                                    <h3>Weekly Activity</h3>
+                                    <div class="activity-calendar" id="activityCalendar">
+                                        <!-- Calendar will be generated here -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Profile Page -->
+                <div id="profile" class="page">
+                    <div class="profile-container">
+                        <div class="profile-header">
+                            <div class="profile-icon">
+                                <i class="fas fa-user-circle"></i>
+                            </div>
+                            <h1>Profile & Goals</h1>
+                            <p>Manage your personal information and set emotional intelligence goals.</p>
+                        </div>
+
+                        <div class="profile-content">
+                            <div class="profile-section">
+                                <h3>Personal Information</h3>
+                                <div class="profile-form">
+                                    <div class="form-group">
+                                        <label>Name</label>
+                                        <input type="text" id="userName" placeholder="Your name">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Email</label>
+                                        <input type="email" id="userEmail" placeholder="your@email.com">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="profile-section">
+                                <h3>EQ Goals</h3>
+                                <div class="goals-list" id="goalsList">
+                                    <div class="goal-item">
+                                        <input type="checkbox" id="goal1">
+                                        <label for="goal1">Improve self-awareness through daily reflection</label>
+                                    </div>
+                                    <div class="goal-item">
+                                        <input type="checkbox" id="goal2">
+                                        <label for="goal2">Practice active listening in conversations</label>
+                                    </div>
+                                    <div class="goal-item">
+                                        <input type="checkbox" id="goal3">
+                                        <label for="goal3">Develop better stress management techniques</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Modal for Journal Entry -->
+    <div class="modal" id="journalModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>New Journal Entry</h3>
+                <button class="modal-close" id="closeModal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="journalForm">
+                    <div class="form-group">
+                        <label>How are you feeling today?</label>
+                        <textarea id="journalContent" placeholder="Write about your thoughts and emotions..."></textarea>
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-outline" id="cancelEntry">Cancel</button>
+                        <button type="submit" class="btn btn-primary">Save Entry</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
